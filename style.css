@@ -14,9 +14,15 @@
 
 tr,th,td{
     border: 1px solid black;
+   
+}
+
+td{
+    overflow-x: auto;
+    outline: none;
 }
 
 th,td{
     min-width: 5vw;
-   
+   max-width: 5vw;
 }
