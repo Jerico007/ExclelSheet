@@ -1,28 +1,177 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
-#table{
-    border: 1px solid black;
-    border-collapse: collapse;
+body {
+  overflow: hidden;
+}
+
+.navigation {
+  background-color: #218c74;
+  height: 3.2rem;
+  position: sticky;
+  top: 0%;
+}
+
+.navigation > ol {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  gap: 2%;
+
+  list-style-type: none;
+  text-align: center;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  position: sticky;
+  background-color: rgb(215, 215, 215);
+  padding: 0.5rem;
+  justify-content: space-around;
+  top: 0%;
+}
+
+.tools > .edit-tools {
+  display: flex;
+  padding: 0.5rem;
+  gap: 2%;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.edit-tools div{
+    cursor: pointer;
+}
+.edit-tools i{
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+/* .edit-tools > i:hover{
+    background-color: rgba(128, 128, 128, 0.34);
+} */
+
+.edit-tools select{
     font-size: 1rem;
-
 }
 
-
-tr,th,td{
-    border: 1px solid black;
-   
+.cell-color,
+.text-color {
+  position: relative;
 }
 
-td{
-    overflow-x: auto;
-    outline: none;
+#cellColor,
+#fontColor {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
 }
 
-th,td{
-    min-width: 5vw;
-   max-width: 5vw;
+.tools > .filter-tools {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  font-size: 1.5rem;
+}
+
+.tools > .filter-tools > #selected-cell {
+  width: 5vw;
+  text-align: center;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+
+.filter-tools > .search {
+  width: 87vw;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+ol > button {
+  color: white;
+  width: 3vw;
+  padding: 0.2rem;
+  background-color: #218c74;
+  height: 5vh;
+  border: none;
+  cursor: pointer;
+}
+
+ol > .home {
+  color: #218c74;
+  background-color: white;
+}
+
+.main-sheet {
+  width: 100vw;
+  height: 71vh;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+#table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+th {
+  font-size: 1rem;
+}
+tr,
+th,
+td {
+  border: 1px solid black;
+}
+
+td {
+  
+  outline-color: #218c74;
+  padding: 0.2rem;
+ 
+}
+
+th,
+td {
+  min-width: 5vw;
+  max-width: 5vw;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  padding: 0.6rem;
+}
+
+.add-sheet {
+  border-radius: 23px;
+  padding: 0.3rem;
+  border: none;
+  background-color: rgb(215, 215, 215);
+  cursor: pointer;
+}
+
+.sheet-button {
+  cursor: pointer;
+  padding: 0.4rem;
+  border: none;
+  background-color: rgb(148, 148, 148);
+  font-size: 0.9rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
 }
