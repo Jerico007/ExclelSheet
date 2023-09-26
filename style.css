@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,200&family=Montserrat:ital,wght@0,100;0,200;1,100&family=Poppins:ital,wght@0,100;0,200;0,300;1,200&family=Rubik&family=Work+Sans&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +22,6 @@ body {
   height: 100%;
   align-items: flex-end;
   gap: 2%;
-
   list-style-type: none;
   text-align: center;
 }
@@ -54,9 +54,9 @@ body {
   padding: 0.5rem;
 }
 
-/* .edit-tools > i:hover{
-    background-color: rgba(128, 128, 128, 0.34);
-} */
+.edit-tools  #align-left{
+  background-color: rgba(128, 128, 128, 0.34) ;
+}
 
 .edit-tools select{
     font-size: 1rem;
@@ -123,7 +123,7 @@ ol > .home {
 }
 
 #table {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-collapse: collapse;
   font-size: 1rem;
 }
@@ -133,7 +133,7 @@ th {
 tr,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid #b1b1b1;
 }
 
 td {
@@ -147,6 +147,7 @@ th,
 td {
   min-width: 5vw;
   max-width: 5vw;
+  
 }
 
 .footer {
