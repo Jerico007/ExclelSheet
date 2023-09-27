@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excel clone</title>
-    <link rel="shortcut icon" href="Assets/Microsoft_Excel-Logo.wine.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="Assets/Microsoft_Excel-Logo.wine.svg"
+      type="image/x-icon"
+    />
     <!-- Font Awesome cdn -->
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- Style.css -->
     <link rel="stylesheet" href="style.css" />
@@ -30,7 +34,11 @@
       <div class="edit-tools">
         <i id="copy" class="fa-solid fa-copy" style="color: #000000"></i>
         <i id="cut" class="fa-solid fa-scissors" style="color: #000000"></i>
-        <i id="paste" class="fa-regular fa-paste fa-solid" style="color: #000000"></i>
+        <i
+          id="paste"
+          class="fa-regular fa-paste fa-solid"
+          style="color: #000000"
+        ></i>
 
         <select id="font-family">
           <option value="Rubik">Rubik</option>
@@ -49,37 +57,35 @@
           <option value="20px">20</option>
         </select>
 
-        <i 
+        <i
           id="bold"
           class="fa-solid fa-bold bold left-icon"
-          style="color: rgb(0, 0, 0); "
+          style="color: rgb(0, 0, 0)"
         ></i>
         <i
           id="italic"
           class="fa-solid fa-italic italic left-icon"
-          style="color: rgb(0, 0, 0); "
+          style="color: rgb(0, 0, 0)"
         ></i>
         <i
-         id="underline"
+          id="underline"
           class="fa-solid fa-underline underline left-icon"
-          style="color: rgb(0, 0, 0);" 
+          style="color: rgb(0, 0, 0)"
         ></i>
-        <i 
-         id="align-left"
+        <i
+          id="align-left"
           class="fa-solid fa-align-left left-align left-icon"
-          style="
-            color: rgb(0, 0, 0);
-          "
+          style="color: rgb(0, 0, 0)"
         ></i>
         <i
-        id="align-center"
+          id="align-center"
           class="fa-solid fa-align-center center-align left-icon"
-          style="color: rgb(0, 0, 0); "
+          style="color: rgb(0, 0, 0)"
         ></i>
         <i
-        id="align-right"
+          id="align-right"
           class="fa-solid fa-align-right right-align left-icon"
-          style="color: rgb(0, 0, 0);"
+          style="color: rgb(0, 0, 0)"
         ></i>
 
         <div class="text-color">
@@ -100,13 +106,16 @@
         </div>
 
         <i
-        id="save"
+          id="save"
           class="fa-regular fa-floppy-disk fa-solid left-icon"
           style="color: #000000"
         ></i>
         <i
-        id="upload" 
-        class="fa-solid fa-upload left-icon" style="color: #000000"></i>
+          id="upload"
+          class="fa-solid fa-upload left-icon"
+          style="color: #000000"
+        >
+          <input type="file" accept=".json"/></i>
       </div>
       <div class="filter-tools">
         <input type="text" id="selected-cell" readonly value="A1" />
