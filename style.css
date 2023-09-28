@@ -138,14 +138,34 @@ ol > .home {
   border-collapse: collapse;
   font-size: 1rem;
 }
+
+thead {
+  position: sticky;
+  top: 0%;
+  z-index: 5;
+}
+
 th {
   font-size: 1rem;
   font-family: "Work Sans", sans-serif;
+  background-color: white;
 }
 tr,
 th,
 td {
   border: 1px solid #b1b1b1;
+}
+
+tr > th:first-child {
+  position: sticky;
+  left: 0%;
+  min-width: 2vw;
+  max-width: 2vw;
+  z-index: 4;
+}
+
+#thead > th:first-child {
+  background-color: grey;
 }
 
 td {
@@ -166,14 +186,23 @@ td {
   padding: 0.6rem;
 }
 
-.add-sheet {
+#add-sheet {
   border-radius: 23px;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border: none;
   background-color: rgb(215, 215, 215);
   cursor: pointer;
 }
 
+#sheets-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  column-gap: 1%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .sheet-button {
   cursor: pointer;
   padding: 0.4rem;
@@ -185,4 +214,8 @@ td {
   border: none;
   border-radius: 5px;
   font-family: "Work Sans", sans-serif;
+}
+
+.selected-sheet{
+  background-color: rgb(67, 66, 66);
 }

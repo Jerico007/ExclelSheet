@@ -115,7 +115,8 @@
           class="fa-solid fa-upload left-icon"
           style="color: #000000"
         >
-          <input type="file" accept=".json"/></i>
+          <input type="file" accept=".json"
+        /></i>
       </div>
       <div class="filter-tools">
         <input type="text" id="selected-cell" readonly value="A1" />
@@ -135,10 +136,12 @@
       </table>
     </div>
     <div class="footer">
-      <button class="add-sheet">
+      <button id="add-sheet">
         <i class="fa-solid fa-plus add-sheet" style="color: #000000"></i>
       </button>
-      <button class="sheet-button">Sheet 1</button>
+      <div id="sheets-holder">
+        <button id="sheet-1" class="sheet-button selected-sheet" onclick="viewSheet(event)" oncontextmenu="deleteSheet(event)" >Sheet 1</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
