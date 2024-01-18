@@ -18,7 +18,7 @@ const save = document.getElementById("save");
 const upload = document.getElementById("upload");
 const addSheetBtn = document.getElementById("add-sheet");
 const sheetsHolder = document.getElementById("sheets-holder");
-// const firstSheet = document.getElementById("sheet-1");
+
 //Copy paste object
 const copy_past_obj = {
   text: "",
@@ -109,7 +109,6 @@ function GenrateColumns(printAlphabets, parentNode, rowNo) {
 GenrateColumns(true, thead);
 
 //code to add row numbers and columns in tbody
-
 function GenrateRows() {
   tbody.innerHTML = "";
   for (let i = 0; i < rows; i++) {
@@ -418,6 +417,7 @@ function getMatrixData(index) {
   }
 }
 
+// Function to viewCurrent sheet when clicked on sheet button
 function viewSheet(e) {
   let btn = e.target;
   if (selectedSheet === btn) {
@@ -527,11 +527,6 @@ function deleteSheet(e) {
         localStorage.setItem(backup, data);
         getMatrixData(0);
       }
-      //  else {
-      //   GenrateRows();
-      //   createVirtualStorage();
-      //   getMatrixData(0);
-      // }
     }
   }
 }
