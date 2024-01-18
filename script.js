@@ -326,10 +326,14 @@ function updateStorage() {
   let cellId = currentCell.id;
   let columnNum = cellId.charCodeAt(cellId[0]) - 65;
   let rowNum = cellId.substring(1) - 1;
+  let id = selectedSheet.id;
   virtualStorage[rowNum][columnNum].id = cellId;
   virtualStorage[rowNum][columnNum]["text"] = currentCell.innerText;
   virtualStorage[rowNum][columnNum]["Style"] = currentCell.style.cssText;
-  // console.log(virtualStorage[rowNum][columnNum]);
+  id = id.split("-");
+  id = id[1] - 1;
+  backupMatrixData(id);
+
 }
 
 //save btn event function
@@ -355,7 +359,6 @@ function showDataInUI(matrix) {
       let cellObj = matrix[i][j];
       if (cellObj.hasOwnProperty("id")) {
         let cell = document.getElementById(cellObj.id);
-        // console.log(cell);
         cell.innerText = cellObj.text;
         cell.style.cssText = cellObj.Style;
       }
@@ -363,7 +366,7 @@ function showDataInUI(matrix) {
   }
 }
 
-//Function to update VirtualStorage
+//Function to upload file to matrix
 function uploadMatrix(e) {
   GenrateRows();
   let file = e.target.files[0];
@@ -442,7 +445,7 @@ function viewSheet(e) {
 //Function to get next sheet btn or next sheet
 function getNextSheetButton() {
   let btn = document.createElement("button");
-  id = selectedSheet.id;
+  let id = selectedSheet.id;
   id = id.split("-");
   id = id[1] - 1;
   backupMatrixData(id);
@@ -510,7 +513,7 @@ function deleteSheet(e) {
       sheetsHolder.removeChild(e.target);
       selectedSheet = nextNode[0];
       selectedSheet.classList.add("selected-sheet");
-      
+
       nextSheet--;
 
       //Backend part
@@ -523,11 +526,12 @@ function deleteSheet(e) {
         data = JSON.stringify(tempArr);
         localStorage.setItem(backup, data);
         getMatrixData(0);
-      } else {
-        GenrateRows();
-        createVirtualStorage();
-        getMatrixData(0);
       }
+      //  else {
+      //   GenrateRows();
+      //   createVirtualStorage();
+      //   getMatrixData(0);
+      // }
     }
   }
 }
